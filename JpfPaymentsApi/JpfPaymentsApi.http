@@ -1,0 +1,6 @@
+@JpfPaymentsApi_HostAddress = http://localhost:5117
+
+GET {{JpfPaymentsApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
