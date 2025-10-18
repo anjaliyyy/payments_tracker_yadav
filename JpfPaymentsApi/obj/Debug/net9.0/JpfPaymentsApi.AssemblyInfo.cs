@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JpfPaymentsApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3abb853714bbf91788b493db4f7d72fb654a4597")]
 [assembly: System.Reflection.AssemblyProductAttribute("JpfPaymentsApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JpfPaymentsApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

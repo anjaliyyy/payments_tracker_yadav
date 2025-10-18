@@ -154,3 +154,4 @@
 /Users/anjaliyadav/Desktop/JPF-PaymentsTracker/JpfPaymentsApi/obj/Debug/net9.0/JpfPaymentsApi.pdb
 /Users/anjaliyadav/Desktop/JPF-PaymentsTracker/JpfPaymentsApi/obj/Debug/net9.0/JpfPaymentsApi.genruntimeconfig.cache
 /Users/anjaliyadav/Desktop/JPF-PaymentsTracker/JpfPaymentsApi/obj/Debug/net9.0/ref/JpfPaymentsApi.dll
+/Users/anjaliyadav/Desktop/JPF-PaymentsTracker/JpfPaymentsApi/obj/Debug/net9.0/JpfPaymentsApi.sourcelink.json
