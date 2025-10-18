@@ -1,0 +1,51 @@
+<h2 class="text-2xl font-semibold mt-8 mb-3">Bills</h2>
+
+<div class="table-container overflow-x-auto bg-white rounded-lg shadow-md border border-gray-200">
+  <table class="table-fixed-layout text-sm">
+    <thead class="bg-gray-50 text-gray-700">
+      <tr>
+        <th class="px-4 py-3 text-left w-[12%]">Bill #</th>
+        <th class="px-4 py-3 text-left w-[16%]">Bill Date</th>
+        <th class="px-4 py-3 text-left w-[16%]">Due Date</th>
+        <th class="px-4 py-3 text-left w-[12%]">Amount</th>
+        <th class="px-4 py-3 text-left w-[12%]">Paid</th>
+        <th class="px-4 py-3 text-left w-[12%]">Balance</th>
+        <th class="px-4 py-3 text-left w-[20%]">Status</th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-gray-200">
+      <!-- If no vendor is selected -->
+      <tr *ngIf="!vendorId">
+        <td colspan="7" class="px-4 py-8 text-gray-500 text-center">
+          Select a vendor to view bills.
+        </td>
+      </tr>
+
+      <!-- If vendor selected but no bills -->
+      <tr *ngIf="vendorId && bills.length === 0">
+        <td colspan="7" class="px-4 py-8 text-gray-500 text-center">
+          No bills for this vendor.
+        </td>
+      </tr>
+
+      <!-- Bill rows -->
+      <tr *ngFor="let b of bills" class="hover:bg-gray-50 transition">
+        <td class="px-4 py-3 font-mono text-gray-800">{{ b.billNumber }}</td>
+        <td class="px-4 py-3">{{ b.billDate | date:'mediumDate' }}</td>
+        <td class="px-4 py-3">{{ b.dueDate | date:'mediumDate' }}</td>
+        <td class="px-4 py-3 font-medium text-gray-900">{{ b.amount | currency }}</td>
+        <td class="px-4 py-3 text-gray-800">{{ b.paidAmount | currency }}</td>
+        <td class="px-4 py-3 text-gray-800">{{ balance(b) | currency }}</td>
+        <td class="px-4 py-3">
+          <span class="font-semibold"
+            [class.text-emerald-600]="b.status==='Paid'"
+            [class.text-amber-600]="b.status==='Partially Paid'"
+            [class.text-rose-600]="b.status==='Pending'">
+            {{ b.status }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

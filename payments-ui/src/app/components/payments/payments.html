@@ -1,0 +1,84 @@
+<div style="max-width: 900px; margin: 0 auto; padding: 12px;">
+  <h3 style="margin-bottom: 8px;">Payments</h3>
+
+  <!-- Add Payment -->
+  <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px;margin-bottom:12px;">
+    <form (ngSubmit)="addPayment()">
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="flex:1 1 220px;">
+          <label style="font-weight:600;display:block;margin-bottom:4px;">Vendor</label>
+          <select [(ngModel)]="selectedVendorId" name="vendor" (change)="onVendorChange()" style="width:100%;padding:8px;">
+            <option *ngFor="let v of vendors" [value]="v.vendorId">{{ v.vendorName }}</option>
+          </select>
+        </div>
+
+        <div style="flex:1 1 260px;">
+          <label style="font-weight:600;display:block;margin-bottom:4px;">Bill</label>
+          <select [(ngModel)]="selectedBillId" name="bill" style="width:100%;padding:8px;">
+            <option *ngFor="let b of bills" [value]="b.billId">
+              {{ b.billNumber }} — {{ b.amount | currency }}
+            </option>
+          </select>
+        </div>
+
+        <div style="flex:0 0 140px;">
+          <label style="font-weight:600;display:block;margin-bottom:4px;">Amount</label>
+          <input type="number" [(ngModel)]="amount" name="amount" style="width:100%;padding:8px;" />
+        </div>
+
+        <div style="flex:0 0 140px;">
+          <label style="font-weight:600;display:block;margin-bottom:4px;">Method</label>
+          <select [(ngModel)]="method" name="method" style="width:100%;padding:8px;">
+            <option value="Manual">Manual</option>
+            <option value="Online">Online</option>
+          </select>
+        </div>
+
+        <div style="flex:0 0 220px;">
+          <label style="font-weight:600;display:block;margin-bottom:4px;">Date</label>
+          <input type="datetime-local" [(ngModel)]="paymentDate" name="paymentDate" style="width:100%;padding:8px;" />
+        </div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <button type="submit" style="background:#0d1b2a;color:#fff;border:none;padding:8px 14px;border-radius:6px;">
+          Add Payment
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- View Payments -->
+  <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+      <h4 style="margin:0;">Payment History</h4>
+      <button (click)="loadPayments()" [disabled]="!selectedBillId"
+              style="background:transparent;border:1px solid #0d1b2a;color:#0d1b2a;padding:6px 12px;border-radius:6px;">
+        View All Payments
+      </button>
+    </div>
+
+    <table *ngIf="payments.length > 0" style="width:100%;border-collapse:collapse;">
+      <thead style="background:#0d1b2a;color:#fff;">
+        <tr>
+          <th style="text-align:left;padding:8px;">Payment ID</th>
+          <th style="text-align:left;padding:8px;">Amount</th>
+          <th style="text-align:left;padding:8px;">Method</th>
+          <th style="text-align:left;padding:8px;">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of payments" style="border-bottom:1px solid #eee;">
+          <td style="padding:8px;font-family:monospace;font-size:0.9rem;">{{ p.paymentId }}</td>
+          <td style="padding:8px;">{{ p.amount | currency }}</td>
+          <td style="padding:8px;">{{ p.method }}</td>
+          <td style="padding:8px;">{{ p.paymentDate | date:'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="payments.length === 0" style="margin:6px 0 0;color:#6b7280;">
+      No payments found for this bill.
+    </p>
+  </div>
+</div>

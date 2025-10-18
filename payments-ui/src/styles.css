@@ -1,0 +1,24 @@
+/* Keep vertical scrollbar space fixed */
+:root { scrollbar-gutter: stable both-edges; }
+html { overflow-y: scroll; }
+
+/* Keep table container layout stable */
+.table-container {
+  min-height: 120px; /* keeps consistent height */
+  display: block;
+}
+
+/* Lock table layout width & prevent text reflow */
+.table-fixed-layout {
+  table-layout: fixed;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
+}
+
+.table-fixed-layout th,
+.table-fixed-layout td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

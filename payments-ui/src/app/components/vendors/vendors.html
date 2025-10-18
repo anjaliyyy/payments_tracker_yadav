@@ -1,0 +1,44 @@
+<h2 class="text-2xl font-semibold mt-8 mb-3 text-center">Vendors</h2>
+
+<!-- Centered table container -->
+<div class="flex justify-center w-full">
+  <div class="w-11/12 md:w-4/5 lg:w-3/4 xl:w-2/3 overflow-x-auto rounded-lg shadow-md border border-gray-200 bg-white">
+    <table class="min-w-full text-sm border-collapse">
+      <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider border-b">
+        <tr>
+          <th class="px-8 py-3 text-left font-semibold">#</th>
+          <th class="px-8 py-3 text-left font-semibold">Vendor</th>
+          <th class="px-8 py-3 text-left font-semibold">Category</th>
+          <th class="px-8 py-3 text-right font-semibold">Balance Owed</th>
+          <th class="px-8 py-3 text-center font-semibold">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-gray-200">
+        <!-- No vendors -->
+        <tr *ngIf="vendors.length === 0">
+          <td colspan="5" class="px-8 py-10 text-center text-gray-500">
+            No vendors found.
+          </td>
+        </tr>
+
+        <!-- Vendors list -->
+        <tr *ngFor="let v of vendors; let i = index" class="hover:bg-gray-50 transition">
+          <td class="px-8 py-5 text-gray-800 font-medium text-center">{{ i + 1 }}</td>
+          <td class="px-8 py-5 text-gray-900 font-semibold">{{ v.vendorName }}</td>
+          <td class="px-8 py-5 text-gray-700">{{ v.category }}</td>
+          <td class="px-8 py-5 text-right font-semibold text-gray-800">{{ v.balance | currency }}</td>
+          <td class="px-8 py-5 text-center">
+            <button
+              type="button"
+              class="px-5 py-2 rounded-md bg-[#0a1a2f] text-white font-medium hover:bg-[#142a47] transition shadow-sm"
+              (click)="viewBills(v)"
+            >
+              View Bills
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
