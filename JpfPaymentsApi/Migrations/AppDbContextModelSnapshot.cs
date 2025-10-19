@@ -52,7 +52,7 @@ namespace JpfPaymentsApi.Migrations
 
                     b.HasIndex("VendorId");
 
-                    b.ToTable("Bills");
+                    b.ToTable("Bills", (string)null);
                 });
 
             modelBuilder.Entity("JpfPaymentsApi.Models.Payment", b =>
@@ -78,7 +78,7 @@ namespace JpfPaymentsApi.Migrations
 
                     b.HasIndex("BillId");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 
             modelBuilder.Entity("JpfPaymentsApi.Models.Vendor", b =>
@@ -102,7 +102,7 @@ namespace JpfPaymentsApi.Migrations
 
                     b.HasKey("VendorId");
 
-                    b.ToTable("Vendors");
+                    b.ToTable("Vendors", (string)null);
                 });
 
             modelBuilder.Entity("JpfPaymentsApi.Models.Bill", b =>

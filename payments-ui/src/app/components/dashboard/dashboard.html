@@ -1,0 +1,53 @@
+<!-- Header + Dashboard side-by-side -->
+<div
+  class="flex flex-col lg:flex-row justify-between items-start lg:items-center max-w-5xl mx-auto mt-6 mb-6 gap-6"
+>
+  <!-- Title -->
+  <div class="flex flex-col">
+    <h2 class="text-lg font-semibold text-black mt-2">Dashboard Overview</h2>
+  </div>
+
+  <!-- Dashboard Cards + Chart -->
+  <div class="flex flex-col lg:flex-row gap-4 items-center">
+    <!-- Cards -->
+    <div class="grid grid-cols-3 gap-3 text-center">
+      <div class="bg-white shadow-md rounded-lg px-4 py-3 hover:shadow-lg transition">
+        <p class="text-gray-500 text-xs">Total Vendors</p>
+        <p class="text-xl font-bold text-black">{{ totalVendors }}</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg px-4 py-3 hover:shadow-lg transition">
+        <p class="text-gray-500 text-xs">Outstanding Balance</p>
+        <p class="text-xl font-bold text-red-600">
+          {{ totalOutstanding | currency }}
+        </p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg px-4 py-3 hover:shadow-lg transition">
+        <p class="text-gray-500 text-xs">Fully Paid Vendors</p>
+        <p class="text-xl font-bold text-green-600">{{ fullyPaidVendors }}</p>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div
+      class="bg-white p-3 rounded-lg shadow-md flex flex-col items-center justify-center"
+      style="width: 140px; height: 140px;"
+    >
+      <canvas
+        baseChart
+        [data]="{
+          datasets: [
+            { data: chartData, backgroundColor: ['#111827', '#10b981'] }
+          ]
+        }"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [type]="'doughnut'"
+        style="max-width: 120px; max-height: 120px;"
+      ></canvas>
+    </div>
+  </div>
+</div>
+
+<hr class="border-gray-200 max-w-5xl mx-auto mb-4" />

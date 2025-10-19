@@ -44,36 +44,22 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 ---
 
 ## Setup Instructions
-Backend 
+Backend
 
-Navigate to the backend folder:
-cd JpfPaymentsApi
+Navigate to the backend folder: cd JpfPaymentsApi
 
-Run the project
-dotnet run
+Run the project dotnet run
 
-The API should start at: 
-http://localhost:5117
+The API should start at: http://localhost:5117
 
+Frontend Open a new terminal and navigate to the Angular app: cd payments-ui
 
-Frontend 
-Open a new terminal and navigate to the Angular app:
-cd payments-ui
+Install dependencies: npm install npm install chart.js ng2-charts npm install @angular/common @angular/core @angular/forms @angular/platform-browser npm install rxjs
 
-Install dependencies:
-npm install
+Start the frontend: ng serve
 
-Start the frontend:
-ng serve
+Open your browser and visit: http://localhost:4200
 
-Open your browser and visit:
-http://localhost:4200
+If you need to reset the database:
 
-
-If you want to clear payments while keeping vendors:
-Delete only the app.db file:
-
-rm JpfPaymentsApi/app.db
-dotnet ef database update
-dotnet run
-
+dotnet ef database drop -f dotnet ef migrations add InitialCreate dotnet ef database update
