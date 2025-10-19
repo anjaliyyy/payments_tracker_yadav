@@ -62,6 +62,9 @@ cd payments-ui
 
 Install dependencies:
 npm install
+npm install chart.js ng2-charts
+npm install @angular/common @angular/core @angular/forms @angular/platform-browser
+npm install rxjs
 
 Start the frontend:
 ng serve
@@ -69,11 +72,8 @@ ng serve
 Open your browser and visit:
 http://localhost:4200
 
+If you need to reset the database:
 
-If you want to clear payments while keeping vendors:
-Delete only the app.db file:
-
-rm JpfPaymentsApi/app.db
+dotnet ef database drop -f
+dotnet ef migrations add InitialCreate
 dotnet ef database update
-dotnet run
-
