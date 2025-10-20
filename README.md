@@ -1,5 +1,6 @@
 # payments_tracker_yadav
 JPF Capital take home project
+Estimated time 6-7 hours
 
 # Mini Payments Tracker
 
