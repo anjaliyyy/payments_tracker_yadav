@@ -11,11 +11,11 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 ##  Features
 
-- Vendor Management — View all vendors and their balances.
-- Bill Tracking — See detailed bill information per vendor.
-- Payment Entry — Add new payments with date, method, and vendor selection.
-- Real-Time Balance Updates — Automatically updates vendor balances when payments are added.
-- Pre-Seeded Demo Data — Includes sample vendors and bills for easy testing.
+- Vendor Management : View all vendors and their balances.
+- Bill Tracking : See detailed bill information per vendor.
+- Payment Entry : Add new payments with date, method, and vendor selection.
+- Real-Time Balance Updates : Automatically updates vendor balances when payments are added.
+- Pre-Seeded Demo Data : Includes sample vendors and bills for easy testing.
 
 ---
 
