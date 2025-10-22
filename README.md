@@ -53,8 +53,6 @@ flowchart TD
     A <--> B[Backend API<br/>ASP.NET Core + EF Core<br/>REST Endpoints:<br/>/api/vendors, /api/bills, /api/payments]
     B <--> C[(SQLite Database<br/>app.db<br/>Seeded Demo Data)]
 
-
-
 **Data Flow Summary**
 
 1. The Angular frontend sends REST API calls (GET/POST) via `ApiService`.
