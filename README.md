@@ -44,11 +44,11 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 ---
 
-Setup Guide (For New Machines)
+# Setup Guide (For New Machines)
 
 Follow these steps to run the Mini Payments Tracker project on any computer.
 
-Install Prerequisites
+- Install Prerequisites
 
 Make sure you have the following installed:
 
@@ -60,17 +60,17 @@ Angular CLI	≥ 17	npm install -g @angular/cli
 .NET SDK	9.0	https://dotnet.microsoft.com/download
 
 SQLite (optional)	—	https://sqlitebrowser.org/
-Clone the Repository
+- Clone the Repository
 git clone https://github.com/anjaliyyy/payments_tracker_yadav.git
 cd payments_tracker_yadav
 
-Backend Setup (ASP.NET Core API)
+- Backend Setup (ASP.NET Core API)
 cd JpfPaymentsApi
 dotnet restore
 dotnet run
 
 
-The API will start at:
+ The API will start at:
 http://localhost:5117
 
 You should see:
@@ -78,7 +78,7 @@ You should see:
 Now listening on: http://localhost:5117
 Application started. Press Ctrl+C to shut down.
 
-Frontend Setup (Angular)
+- Frontend Setup (Angular)
 
 Open a new terminal window/tab:
 
@@ -98,12 +98,12 @@ Then run the Angular app:
 ng serve
 
 
-The frontend will start at:
+ The frontend will start at:
 http://localhost:4200
 
 Open that link in your browser to view the dashboard.
 
- Reset or Recreate the Database (Optional)
+- Reset or Recreate the Database (Optional)
 
 If you want to rebuild the demo data:
 
@@ -115,7 +115,7 @@ dotnet ef database update
 
 This will recreate the local app.db file with seeded vendors and bills.
 
- Quick Start (TL;DR)
+- Quick Start (TL;DR)
 
 For a brand-new setup:
 
@@ -133,14 +133,9 @@ npm install
 ng serve
 
 
-Then open  http://localhost:4200
+Then open 👉 http://localhost:4200
 
-Tip
+- Tip for Recruiters
 
 Everything runs locally — no external keys or credentials required.
 The project auto-seeds sample vendors, bills, and payments for immediate demo use.
-Open your browser and visit: http://localhost:4200
-
-If you need to reset the database:
-
-dotnet ef database drop -f dotnet ef migrations add InitialCreate dotnet ef database update
