@@ -25,7 +25,7 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 | Layer        | Technology                                       |
 | ------------ | ------------------------------------------------ |
-| Frontend     | Angular 19, TypeScript, TailwindCSS              |
+| Frontend     | Angular 20, TypeScript, TailwindCSS              |
 | Backend      | ASP.NET Core Web API (C#), Entity Framework Core |
 | Database     | SQLite (local `app.db`)                          |
 | Runtime      | .NET 9.0                                         |
@@ -53,7 +53,7 @@ Follow these steps to run the Mini Payments Tracker project on any computer.
 | ----------------- | ------- | ------------------------------------------------------------------------------ |
 | Node.js           | ≥ 18.x  | [https://nodejs.org/](https://nodejs.org/)                                     |
 | npm               | ≥ 9.x   | (comes with Node)                                                              |
-| Angular CLI       | ≥ 17    | `npm install -g @angular/cli`                                                  |
+| Angular CLI       | ≥ 20    | `npm install -g @angular/cli`                                                  |
 | .NET SDK          | 9.0     | [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download) |
 | SQLite (optional) | —       | [https://sqlitebrowser.org/](https://sqlitebrowser.org/)                       |
 
