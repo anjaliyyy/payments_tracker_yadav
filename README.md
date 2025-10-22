@@ -25,7 +25,7 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 | Layer        | Technology                                       |
 | ------------ | ------------------------------------------------ |
-| Frontend     | Angular 17, TypeScript, TailwindCSS              |
+| Frontend     | Angular 19, TypeScript, TailwindCSS              |
 | Backend      | ASP.NET Core Web API (C#), Entity Framework Core |
 | Database     | SQLite (local `app.db`)                          |
 | Runtime      | .NET 9.0                                         |
