@@ -44,21 +44,101 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 ---
 
-## Setup Instructions
-Backend
+Setup Guide (For New Machines)
 
-Navigate to the backend folder: cd JpfPaymentsApi
+Follow these steps to run the Mini Payments Tracker project on any computer.
 
-Run the project dotnet run
+Install Prerequisites
 
-The API should start at: http://localhost:5117
+Make sure you have the following installed:
 
-Frontend Open a new terminal and navigate to the Angular app: cd payments-ui
+Tool	Version	Install Command / Link
+Node.js	≥ 18.x	https://nodejs.org/
 
-Install dependencies: npm install npm install chart.js ng2-charts npm install @angular/common @angular/core @angular/forms @angular/platform-browser npm install rxjs
+npm	≥ 9.x	(comes with Node)
+Angular CLI	≥ 17	npm install -g @angular/cli
+.NET SDK	9.0	https://dotnet.microsoft.com/download
 
-Start the frontend: ng serve
+SQLite (optional)	—	https://sqlitebrowser.org/
+Clone the Repository
+git clone https://github.com/anjaliyyy/payments_tracker_yadav.git
+cd payments_tracker_yadav
 
+Backend Setup (ASP.NET Core API)
+cd JpfPaymentsApi
+dotnet restore
+dotnet run
+
+
+The API will start at:
+http://localhost:5117
+
+You should see:
+
+Now listening on: http://localhost:5117
+Application started. Press Ctrl+C to shut down.
+
+Frontend Setup (Angular)
+
+Open a new terminal window/tab:
+
+cd payments-ui
+npm install
+
+
+If needed, also install specific packages manually:
+
+npm install chart.js ng2-charts
+npm install @angular/common @angular/core @angular/forms @angular/platform-browser
+npm install rxjs tailwindcss
+
+
+Then run the Angular app:
+
+ng serve
+
+
+The frontend will start at:
+http://localhost:4200
+
+Open that link in your browser to view the dashboard.
+
+ Reset or Recreate the Database (Optional)
+
+If you want to rebuild the demo data:
+
+cd JpfPaymentsApi
+dotnet ef database drop -f
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+This will recreate the local app.db file with seeded vendors and bills.
+
+ Quick Start (TL;DR)
+
+For a brand-new setup:
+
+git clone https://github.com/anjaliyyy/payments_tracker_yadav.git
+cd payments_tracker_yadav
+
+# Backend
+cd JpfPaymentsApi
+dotnet restore
+dotnet run
+
+# Frontend (new terminal)
+cd payments-ui
+npm install
+ng serve
+
+
+Then open  http://localhost:4200
+
+Tip
+
+Everything runs locally — no external keys or credentials required.
+The project auto-seeds sample vendors, bills, and payments for immediate demo use.
 Open your browser and visit: http://localhost:4200
 
 If you need to reset the database:
