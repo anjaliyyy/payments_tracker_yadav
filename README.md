@@ -87,7 +87,6 @@ Below is a high-level overview of how the system’s components interact:
 │  Local file: `app.db`        │
 └──────────────────────────────┘
 
-
 Data Flow Summary:
 
 The Angular frontend sends REST API calls (GET/POST) via ApiService.
