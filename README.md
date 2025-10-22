@@ -43,24 +43,6 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 ---
 
-## Project Architecture
-
-Below is a high-level overview of how the system’s components interact:
-
-```mermaid
-flowchart TD
-    A[Frontend<br/>Angular + Tailwind<br/>Vendors · Bills · Payments<br/>RxJS Live Updates]
-    A <--> B[Backend API<br/>ASP.NET Core + EF Core<br/>REST Endpoints:<br/>/api/vendors, /api/bills, /api/payments]
-    B <--> C[(SQLite Database<br/>app.db<br/>Seeded Demo Data)]
-
-**Data Flow Summary**
-
-1. The Angular frontend sends REST API calls (GET/POST) via `ApiService`.
-2. The .NET backend handles those requests using controllers, performs logic through Entity Framework Core, and updates the SQLite database.
-3. The frontend automatically refreshes dashboards and tables through RxJS observables, reflecting changes in real time.
-
----
-
 ## Setup Guide (For New Machines)
 
 Follow these steps to run the Mini Payments Tracker project on any computer.
@@ -180,4 +162,3 @@ Everything runs locally; no external keys or credentials are required.
 The project auto-seeds sample vendors, bills, and payments for immediate demo use.
 
 ---
-
