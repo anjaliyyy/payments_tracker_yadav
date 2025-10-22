@@ -47,12 +47,13 @@ This project was created as a candidate coding project for JPF Capital, showcasi
 
 Below is a high-level overview of how the system’s components interact:
 
+
 ```mermaid
 flowchart TD
   A[Frontend<br/>Angular + Tailwind<br/>Vendors · Bills · Payments<br/>RxJS Live Updates]
-  A <--> |HTTP (JSON)| B[Backend API<br/>ASP.NET Core + EF Core<br/>REST: /api/vendors · /api/bills · /api/payments]
-  B <--> |EF Core (SQL)| C[(SQLite<br/>app.db<br/>Seeded Demo Data)]
-```
+  A <--> B[Backend API<br/>ASP.NET Core + EF Core<br/>REST Endpoints: /api/vendors, /api/bills, /api/payments]
+  B <--> C[(SQLite Database<br/>app.db<br/>Seeded Demo Data)]
+
 
 **Data Flow Summary**
 
