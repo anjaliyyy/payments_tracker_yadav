@@ -107,7 +107,7 @@ The frontend automatically refreshes dashboards and tables through RxJS observab
 
 Follow these steps to run the Mini Payments Tracker project on any computer.
 
-- Install Prerequisites
+1. Install Prerequisites
 
 Make sure you have the following installed:
 
@@ -119,11 +119,11 @@ Angular CLI	≥ 17	npm install -g @angular/cli
 .NET SDK	9.0	https://dotnet.microsoft.com/download
 
 SQLite (optional)	—	https://sqlitebrowser.org/
-- Clone the Repository
+2. Clone the Repository
 git clone https://github.com/anjaliyyy/payments_tracker_yadav.git
 cd payments_tracker_yadav
 
-- Backend Setup (ASP.NET Core API)
+3. Backend Setup (ASP.NET Core API)
 cd JpfPaymentsApi
 dotnet restore
 dotnet run
@@ -137,7 +137,7 @@ You should see:
 Now listening on: http://localhost:5117
 Application started. Press Ctrl+C to shut down.
 
-- Frontend Setup (Angular)
+4. Frontend Setup (Angular)
 
 Open a new terminal window/tab:
 
@@ -162,7 +162,7 @@ http://localhost:4200
 
 Open that link in your browser to view the dashboard.
 
-- Reset or Recreate the Database (Optional)
+5. Reset or Recreate the Database (Optional)
 
 If you want to rebuild the demo data:
 
@@ -174,7 +174,7 @@ dotnet ef database update
 
 This will recreate the local app.db file with seeded vendors and bills.
 
-- Quick Start (TL;DR)
+# Quick Start
 
 For a brand-new setup:
 
@@ -192,9 +192,9 @@ npm install
 ng serve
 
 
-Then open 👉 http://localhost:4200
+Then open  http://localhost:4200
 
-- Tip for Recruiters
+- Tip 
 
 Everything runs locally — no external keys or credentials required.
 The project auto-seeds sample vendors, bills, and payments for immediate demo use.
